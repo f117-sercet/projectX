@@ -30,3 +30,4 @@
 *.exe
 *.out
 *.app
+/UE/printC/myThirdProject01/.vs/

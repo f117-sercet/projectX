@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\source\\mythirdproject01\\mythirdproject01gamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\mythirdproject01editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mythirdproject01\\definitions.mythirdproject01.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\source\\mythirdproject01\\mythirdproject01gamemode.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mythirdproject01gamemode.generated.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\source\\mythirdproject01\\mythirdproject01character.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mythirdproject01character.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
