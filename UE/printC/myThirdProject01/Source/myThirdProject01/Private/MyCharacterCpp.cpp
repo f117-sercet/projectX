@@ -17,9 +17,9 @@ void AMyCharacterCpp::BeginPlay()
 	Super::BeginPlay();
 	
 }
-bool AMyCharacterCpp::CallableFunction() {
-	
-	return true;}
+void AMyCharacterCpp::CallableFunction(){
+	UE_LOG(LogTemp,Warning,TEXT("Callable"));
+}
 
 
 // Called every frame

@@ -7,8 +7,7 @@
 #include "MyCharacterCpp.generated.h"
 
 UCLASS()
-class MYTHIRDPROJECT01_API AMyCharacterCpp : public ACharacter
-{
+class MYTHIRDPROJECT01_API AMyCharacterCpp : public ACharacter{
 	GENERATED_BODY()
 
 public:
@@ -31,7 +30,7 @@ public:
 	float testLens;
 	// Uproperty 属性
 	// Callable
-	UPROPERTY(BlueprintCallable)
-	bool CallableFunction();
+	UFUNCTION(BlueprintCallable)
+	void  CallableFunction();
 
 };
