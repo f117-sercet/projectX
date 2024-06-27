@@ -33,13 +33,30 @@ struct Z_Construct_UClass_AMyCharacterCpp_Statics
 		{ "IncludePath", "MyCharacterCpp.h" },
 		{ "ModuleRelativePath", "Public/MyCharacterCpp.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_testLens_MetaData[] = {
+		{ "Category", "MyCharacterCpp" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Uproperty \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MyCharacterCpp.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Uproperty \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_testLens;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMyCharacterCpp>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyCharacterCpp_Statics::NewProp_testLens = { "testLens", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyCharacterCpp, testLens), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_testLens_MetaData), NewProp_testLens_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyCharacterCpp_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyCharacterCpp_Statics::NewProp_testLens,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacterCpp_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyCharacterCpp_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_ACharacter,
 	(UObject* (*)())Z_Construct_UPackage__Script_myThirdProject01,
@@ -51,11 +68,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AMyCharacterCpp_Statics
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_AMyCharacterCpp_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacterCpp_Statics::PropPointers),
 	0,
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMyCharacterCpp_Statics::Class_MetaDataParams), Z_Construct_UClass_AMyCharacterCpp_Statics::Class_MetaDataParams)
@@ -80,10 +97,10 @@ AMyCharacterCpp::~AMyCharacterCpp() {}
 struct Z_CompiledInDeferFile_FID_myThirdProject01_Source_myThirdProject01_Public_MyCharacterCpp_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyCharacterCpp, AMyCharacterCpp::StaticClass, TEXT("AMyCharacterCpp"), &Z_Registration_Info_UClass_AMyCharacterCpp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyCharacterCpp), 1417386212U) },
+		{ Z_Construct_UClass_AMyCharacterCpp, AMyCharacterCpp::StaticClass, TEXT("AMyCharacterCpp"), &Z_Registration_Info_UClass_AMyCharacterCpp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyCharacterCpp), 1875021251U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_myThirdProject01_Source_myThirdProject01_Public_MyCharacterCpp_h_1176588618(TEXT("/Script/myThirdProject01"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_myThirdProject01_Source_myThirdProject01_Public_MyCharacterCpp_h_3973907959(TEXT("/Script/myThirdProject01"),
 	Z_CompiledInDeferFile_FID_myThirdProject01_Source_myThirdProject01_Public_MyCharacterCpp_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_myThirdProject01_Source_myThirdProject01_Public_MyCharacterCpp_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

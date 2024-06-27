@@ -26,4 +26,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Uproperty 属性
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float testLens;
+	// Uproperty 属性
+	// Callable
+	UPROPERTY(BlueprintCallable)
+	bool CallableFunction();
+
 };

@@ -17,6 +17,10 @@ void AMyCharacterCpp::BeginPlay()
 	Super::BeginPlay();
 	
 }
+bool AMyCharacterCpp::CallableFunction() {
+	
+	return true;}
+
 
 // Called every frame
 void AMyCharacterCpp::Tick(float DeltaTime)
@@ -31,4 +35,3 @@ void AMyCharacterCpp::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
-
