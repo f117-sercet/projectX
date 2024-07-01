@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "MyCharacterCpp.generated.h"
 
+class USpringArmComponent;
+
 UCLASS()
 class MYTHIRDPROJECT01_API AMyCharacterCpp : public ACharacter{
 	GENERATED_BODY()
@@ -27,10 +29,14 @@ public:
 
 	// Uproperty 属性
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	float testLens;
+	float testLens = 0.1f;
 	// Uproperty 属性
 	// Callable
 	UFUNCTION(BlueprintCallable)
 	void  CallableFunction();
+
+private:
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
+	TObjectPtr<USpringArmComponent>CameraBoom;
 
 };

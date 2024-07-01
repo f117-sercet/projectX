@@ -15,7 +15,11 @@
             "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mycharactercpp.generated.h"
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mycharactercpp.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
+            "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
+            "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
