@@ -76,13 +76,13 @@ protected:
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
-	/** Returns FollowCamera subobject **/
+	/** Returns FollowCamera subObject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	
 
-private:
+/*private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
-	TObjectPtr<USpringArmComponent>CameraBooNers;
+	TObjectPtr<USpringArmComponent>CameraBooNers;*/
 	
 };
 

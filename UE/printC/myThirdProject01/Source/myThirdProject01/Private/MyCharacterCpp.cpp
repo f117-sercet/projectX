@@ -2,6 +2,9 @@
 
 
 #include "MyCharacterCpp.h"
+
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 #include "Camera/CameraComponent.h"
 # include "GameFramework/SpringArmComponent.h"
 
@@ -29,13 +32,46 @@ void AMyCharacterCpp::BeginPlay()
 	Super::BeginPlay();
 	// 打log
 	GEngine->AddOnScreenDebugMessage(-1,0,FColor::Blue,FString::Printf(TEXT("Camera Boom:TargetArmLength:%f"),CameraBoom->TargetArmLength));
+	if (const ULocalPlayer*Player = (GEngine&&GetWorld())?GEngine->GetFirstGamePlayer(GetWorld()):nullptr)
+	{
+
+		// 引入输入增强子系统
+		UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(Player);
+
+		// 注入上下文
+		if (DefaultMapping)
+		{
+			Subsystem->AddMappingContext(DefaultMapping,0);
+		}
+		
+	}
 	
 }
 void AMyCharacterCpp::CallableFunction(){
 	
 	UE_LOG(LogTemp,Warning,TEXT("Callable"));
 }
-
+void Move(const FInputActionValue& Value)
+{
+	FVector2D MoveVector = Value.Get<FVector2D>();
+	if (Controller!=nullptr)
+	{
+		const FRotator Rotation = Controller->GetControlRotation();
+	}
+}
+void LOOK(const FInputActionValue& Value)
+{
+	FVector2D lookVector = Value.Get<FVector2D>();
+	if (Controller)
+	{
+		AddControllerYawInput(lookVector.X);
+		AddControllerPitchInput(lookVector.Y);
+		
+	}
+	{
+		
+	}
+}
 
 // Called every frame
 void AMyCharacterCpp::Tick(float DeltaTime)
@@ -48,5 +84,11 @@ void AMyCharacterCpp::Tick(float DeltaTime)
 void AMyCharacterCpp::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	if (UEnhancedInputComponent* enhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		enhancedInputComponent->BindAction(LookAction,ETriggerEvent::Triggered,this,&AMyCharacterCpp::LOOK);
+		enhancedInputComponent->BindAction(MoveAction,ETriggerEvent::Triggered,this,&AMyCharacterCpp::Move);
+	}
 
 }

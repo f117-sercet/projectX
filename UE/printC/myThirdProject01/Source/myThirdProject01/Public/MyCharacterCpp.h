@@ -3,9 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InputAction.h"
 #include "GameFramework/Character.h"
 #include "MyCharacterCpp.generated.h"
 
+class UInputMappingContext;
 class USpringArmComponent;
 
 UCLASS()
@@ -19,6 +21,9 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	void Move(const FInputActionValue& Value);
+	void LOOK(const FInputActionValue& Value);
 
 public:	
 	// Called every frame
@@ -45,5 +50,9 @@ private:
 
 	//Input
 	UPROPERTY(EditDefaultsOnly,Category="Input")
-	TObjectPtr<UInputAction> DefaultMappingAction;
+	TObjectPtr<UInputAction> MoveAction;
+
+	//Input
+	UPROPERTY(EditDefaultsOnly,Category="Input")
+	TObjectPtr<UInputAction> LookAction;
 };
