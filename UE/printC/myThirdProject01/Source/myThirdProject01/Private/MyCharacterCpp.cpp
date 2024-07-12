@@ -32,6 +32,7 @@ void AMyCharacterCpp::BeginPlay()
 	
 }
 void AMyCharacterCpp::CallableFunction(){
+	
 	UE_LOG(LogTemp,Warning,TEXT("Callable"));
 }
 

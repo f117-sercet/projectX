@@ -39,4 +39,11 @@ private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
 	TObjectPtr<USpringArmComponent>CameraBoom;
 
+	//Input
+	UPROPERTY(EditDefaultsOnly,Category="Input")
+	TObjectPtr<UInputMappingContext> DefaultMapping;
+
+	//Input
+	UPROPERTY(EditDefaultsOnly,Category="Input")
+	TObjectPtr<UInputAction> DefaultMappingAction;
 };
