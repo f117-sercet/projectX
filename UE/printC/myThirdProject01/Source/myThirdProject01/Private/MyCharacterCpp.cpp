@@ -47,31 +47,42 @@ void AMyCharacterCpp::BeginPlay()
 	}
 	
 }
+
+void AMyCharacterCpp::Move(const FInputActionValue& Value)
+{
+	FVector2D MoveVector = Value.Get<FVector2D>();
+	if (Controller)
+	{
+		// 偏航角
+		const FRotator  Rotator = Controller->GetControlRotation();
+		const FRotator YawRotation(0,Rotator.Yaw,0);
+		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		AddMovementInput(ForwardDirection,MoveVector.X);
+		AddMovementInput(ForwardDirection,MoveVector.Y);
+	}
+}
+
+void AMyCharacterCpp::LOOK(const FInputActionValue& Value)
+{
+
+	FVector2D lookVector = Value.Get<FVector2D>();
+	if (Controller)
+	{
+		// 偏航
+		AddControllerYawInput(lookVector.X);
+		//俯仰
+		AddControllerPitchInput(lookVector.Y);
+		
+	}
+}
+
+
 void AMyCharacterCpp::CallableFunction(){
 	
 	UE_LOG(LogTemp,Warning,TEXT("Callable"));
 }
-void Move(const FInputActionValue& Value)
-{
-	FVector2D MoveVector = Value.Get<FVector2D>();
-	if (Controller!=nullptr)
-	{
-		const FRotator Rotation = Controller->GetControlRotation();
-	}
-}
-void LOOK(const FInputActionValue& Value)
-{
-	FVector2D lookVector = Value.Get<FVector2D>();
-	if (Controller)
-	{
-		AddControllerYawInput(lookVector.X);
-		AddControllerPitchInput(lookVector.Y);
-		
-	}
-	{
-		
-	}
-}
+
 
 // Called every frame
 void AMyCharacterCpp::Tick(float DeltaTime)
