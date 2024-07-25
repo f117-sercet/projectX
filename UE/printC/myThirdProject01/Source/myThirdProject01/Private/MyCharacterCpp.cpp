@@ -6,6 +6,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 # include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
@@ -23,7 +24,22 @@ AMyCharacterCpp::AMyCharacterCpp()
 	 auto PlayerCamera= CreateDefaultSubobject<USpringArmComponent>("Player Camera");
 	// 附着某一个位置
 	PlayerCamera->SetupAttachment(CameraBoom,USpringArmComponent::SocketName);
-	//PlayerCamera->SetupAttachment(GetMesh(),FName("RootSocket"));
+	PlayerCamera->SetupAttachment(GetMesh(),FName("RootSocket"));
+
+
+	// 不要让角色随着控制杆旋转
+	bUseControllerRotationYaw = false;
+	bUseControllerRotationRoll = false;
+	bUseControllerRotationPitch = false;
+	// 2.相机杆旋转,相机不旋转
+	CameraBoom->bUsePawnControlRotation = true;
+	PlayerCamera->bUsePawnControlRotation = true;
+	
+	// 角色跟随运动方向
+	GetCharacterMovement()->bOrientRotationToMovement =true;
+	GetCharacterMovement()->RotationRate =FRotator(0.f,400.f,0.f);
+	
+	
 }
 
 // Called when the game starts or when spawned
