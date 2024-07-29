@@ -38,8 +38,15 @@ AMyCharacterCpp::AMyCharacterCpp()
 	// 角色跟随运动方向
 	GetCharacterMovement()->bOrientRotationToMovement =true;
 	GetCharacterMovement()->RotationRate =FRotator(0.f,400.f,0.f);
+	SphereComponent = CreateDefaultSubobject<USphereComponent>("碰撞体积");
+	SphereComponent ->SetSphereRadius(35.f);
 	
 	
+}
+
+void AMyCharacterCpp::Attack()
+{
+	UE_LOG(LogTemp,Warning,TEXT("Attack from character"))
 }
 
 // Called when the game starts or when spawned
