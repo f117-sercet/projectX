@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "InputAction.h"
+#include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
 #include "MyCharacterCpp.generated.h"
 
@@ -18,6 +19,15 @@ public:
 	// Sets default values for this character's properties
 	AMyCharacterCpp();
 
+	// 虚函数
+	UFUNCTION(BlueprintCallable, Category="Action")
+	virtual void Attack();
+
+	// 添加碰撞体
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
+	TObjectPtr<USphereComponent> SphereComponent;
+	
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
