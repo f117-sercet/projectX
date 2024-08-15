@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-#include "myThirdProject01/myThirdProject01Character.h"
 #include "MyAnimInstance.generated.h"
 
 /**

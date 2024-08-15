@@ -49,6 +49,11 @@ public:
 	// Callable
 	UFUNCTION(BlueprintCallable)
 	void  CallableFunction();
+    UPROPERTY(EditAnywhere)
+	// 数组
+	TArray<int32> MyIntArray;
+	
+	
 
 private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
@@ -65,4 +70,5 @@ private:
 	//Input
 	UPROPERTY(EditDefaultsOnly,Category="Input")
 	TObjectPtr<UInputAction> LookAction;
+	
 };

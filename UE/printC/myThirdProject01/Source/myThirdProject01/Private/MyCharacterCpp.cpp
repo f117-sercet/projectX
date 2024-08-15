@@ -40,7 +40,17 @@ AMyCharacterCpp::AMyCharacterCpp()
 	GetCharacterMovement()->RotationRate =FRotator(0.f,400.f,0.f);
 	SphereComponent = CreateDefaultSubobject<USphereComponent>("碰撞体积");
 	SphereComponent ->SetSphereRadius(35.f);
+
+	MyIntArray.Add(1);
+	MyIntArray.Add(2);
+	MyIntArray.Add(3);
+
+	int32 Element = MyIntArray[2];
 	
+
+	// 打印
+	for (int32 IntArray : MyIntArray) 
+	printf("%d",IntArray);
 	
 }
 
@@ -123,6 +133,8 @@ void AMyCharacterCpp::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	{
 		enhancedInputComponent->BindAction(LookAction,ETriggerEvent::Triggered,this,&AMyCharacterCpp::LOOK);
 		enhancedInputComponent->BindAction(MoveAction,ETriggerEvent::Triggered,this,&AMyCharacterCpp::Move);
+
+		
 	}
 
 }
