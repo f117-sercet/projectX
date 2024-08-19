@@ -1,8 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-
-#include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "myThirdProject01Character.generated.h"
@@ -80,9 +78,9 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	
 
-/*private:
+private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=CAMERA_ZOOM_DAMPEN,meta=(AllowPrivateAccess="true"))
-	TObjectPtr<USpringArmComponent>CameraBooNers;*/
+	TObjectPtr<USpringArmComponent>CameraBooNers;
 	
 };
 

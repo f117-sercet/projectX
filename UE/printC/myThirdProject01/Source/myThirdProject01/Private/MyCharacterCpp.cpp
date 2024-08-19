@@ -12,16 +12,16 @@
 // Sets default values
 AMyCharacterCpp::AMyCharacterCpp()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	 CameraBoom = CreateDefaultSubobject<USpringArmComponent>("CameraBoom");
+	CameraBoom -> CreateDefaultSubobject<USpringArmComponent>("CameraBoom");
 	// 挂到根节点
 	CameraBoom->SetupAttachment(RootComponent);
 	// 设置相机杆
 	CameraBoom->TargetArmLength = 600.f;
 	// 调整角度
 	CameraBoom->SetRelativeRotation(FRotator(-40.F,0.F,0.F));
-	 auto PlayerCamera= CreateDefaultSubobject<USpringArmComponent>("Player Camera");
+	auto PlayerCamera= CreateDefaultSubobject<USpringArmComponent>("Player Camera");
 	// 附着某一个位置
 	PlayerCamera->SetupAttachment(CameraBoom,USpringArmComponent::SocketName);
 	PlayerCamera->SetupAttachment(GetMesh(),FName("RootSocket"));
@@ -34,11 +34,15 @@ AMyCharacterCpp::AMyCharacterCpp()
 	// 2.相机杆旋转,相机不旋转
 	CameraBoom->bUsePawnControlRotation = true;
 	PlayerCamera->bUsePawnControlRotation = true;
+
+	SphereComponentBall->SetSphereRadius(35.f);
+	SetRootComponent(SphereComponentBall);
+	ProjectMovement -> CreateDefaultSubobject<UProjectileMovementComponent>("Projectile Movement");
 	
 	// 角色跟随运动方向
 	GetCharacterMovement()->bOrientRotationToMovement =true;
 	GetCharacterMovement()->RotationRate =FRotator(0.f,400.f,0.f);
-	SphereComponent = CreateDefaultSubobject<USphereComponent>("碰撞体积");
+	SphereComponent -> CreateDefaultSubobject<USphereComponent>("碰撞体积");
 	SphereComponent ->SetSphereRadius(35.f);
 
 	MyIntArray.Add(1);
@@ -49,14 +53,14 @@ AMyCharacterCpp::AMyCharacterCpp()
 	
 
 	// 打印
-	for (int32 IntArray : MyIntArray) 
-	printf("%d",IntArray);
+	for (int32 IntArray : MyIntArray){ 
+		printf("%d",IntArray);
 	
+	}
 }
 
-void AMyCharacterCpp::Attack()
-{
-	UE_LOG(LogTemp,Warning,TEXT("Attack from character"))
+void AMyCharacterCpp::Attack(){
+	//UE_LOG(LogTemp,Warning,TEXT("Attack from character"))
 }
 
 // Called when the game starts or when spawned
@@ -113,7 +117,7 @@ void AMyCharacterCpp::LOOK(const FInputActionValue& Value)
 
 void AMyCharacterCpp::CallableFunction(){
 	
-	UE_LOG(LogTemp,Warning,TEXT("Callable"));
+	//UE_LOG(LogTemp,Warning,TEXT("Callable"));
 }
 
 
@@ -135,6 +139,7 @@ void AMyCharacterCpp::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		enhancedInputComponent->BindAction(MoveAction,ETriggerEvent::Triggered,this,&AMyCharacterCpp::Move);
 
 		
-	}
+	};
+	void AMyCharacterCpp::Fire();
 
 }

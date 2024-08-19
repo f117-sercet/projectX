@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#pragma once
-#include "InputAction.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "MyCharacterCpp.generated.h"
 
 class UInputMappingContext;
@@ -50,6 +49,10 @@ public:
     UPROPERTY(EditAnywhere)
 	// 数组
 	TArray<int32> MyIntArray;
+
+	FORCEINLINE UProjectileMovementComponent* GetProjectileMovementComponent() const {return ProjectMovement;}
+
+
 	
 	
 
@@ -68,5 +71,16 @@ private:
 	//Input
 	UPROPERTY(EditDefaultsOnly,Category="Input")
 	TObjectPtr<UInputAction> LookAction;
+
+
+	// 添加碰撞体(球体)
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="Ball",meta=(AllowPrivateAccess="true"))
+	TObjectPtr<USphereComponent> SphereComponentBall;
+
+	// 移动
+	TObjectPtr<UProjectileMovementComponent> ProjectMovement;
+	
+	
+
 	
 };
