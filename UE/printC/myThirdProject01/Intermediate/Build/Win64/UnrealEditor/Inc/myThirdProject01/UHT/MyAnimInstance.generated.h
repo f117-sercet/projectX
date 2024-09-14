@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MYTHIRDPROJECT01_MyAnimInstance_generated_h
 
-#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyAnimInstance(); \
 	friend struct Z_Construct_UClass_UMyAnimInstance_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UMyAnimInstance)
 
 
-#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UMyAnimInstance();
 
 
-#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_12_PROLOG
-#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_15_GENERATED_BODY \
+#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_13_PROLOG
+#define FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
-	FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+	FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_16_INCLASS_NO_PURE_DECLS \
+	FID_myThirdProject01_Source_myThirdProject01_Public_MyAnimInstance_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

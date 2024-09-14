@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\source\\mythirdproject01\\private\\mypawnpayer.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\mythirdproject01editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\mythirdproject01\\definitions.mythirdproject01.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\source\\mythirdproject01\\public\\mypawnpayer.h",
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mypawnpayer.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

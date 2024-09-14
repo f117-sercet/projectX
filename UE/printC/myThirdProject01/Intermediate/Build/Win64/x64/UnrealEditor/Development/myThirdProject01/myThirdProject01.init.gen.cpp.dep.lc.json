@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\unrealeditor\\inc\\mythirdproject01\\uht\\mythirdproject01.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\mythirdproject01editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\git\\repository\\github\\projectx\\ue\\printc\\mythirdproject01\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mythirdproject01\\definitions.mythirdproject01.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
